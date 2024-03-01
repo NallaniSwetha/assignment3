@@ -1,0 +1,215 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 5px;
+    padding: 5px;
+    background-color: #a8ecea;
+}
+
+
+.container{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr,1fr,1fr;
+    grid-template-rows: 0.2fr,1.2fr,1fr,1fr,1fr,1fr,1fr,1fr;
+    grid-gap:0.2rem;
+    grid-template-areas: 
+    "nav nav nav"
+    "main main main"
+    "project project project"
+    "project1 project2 project3"
+    "experience experience experience"
+    "education education education"
+    "blogs blogs blogs"
+    "footer footer footer"
+}
+nav {
+    grid-area: nav;
+    background-color: #2b2727;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+nav li {
+    flex: 1; 
+    text-align: center; 
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: rgb(65, 191, 216);
+}
+main{
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #73b1bd;
+
+}
+main h3{
+    text-align: center;
+}
+
+main img{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 15px;
+    height:270px;
+    width:225px;
+    display: block;
+}
+
+
+#Projects{
+    grid-area: project;
+    background-color:  #73b1bd;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    text-align: left; 
+}
+#project1{
+    grid-area: project1;
+}
+#project2{
+    grid-area: project2;
+}
+#project3{
+    grid-area: project3;
+}
+#Projects ul {
+    list-style-type: none;
+    display: flex;
+   
+}
+#Project li {
+    flex: 1; 
+    text-align: center; 
+    margin:5px;
+}
+#Project_img{
+    height:100px;
+    width:150px;
+
+}
+#Experience {
+    grid-area: experience;
+    background-color:  #73b1bd;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+}
+
+#Education {
+    grid-area: education;
+    background-color:  #73b1bd;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+}
+.edu{
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+}
+.edu img{
+    height:130px;
+    width: 100px;
+    border-radius: 5px;
+    padding-right: 20px;
+}
+#Blogs{
+    grid-area: blogs;
+    background-color:  #73b1bd;
+    padding: 10px;
+}
+
+.blog{
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+}
+.blog img{
+    height:120px;
+    width: 120px;
+    padding-right: 20px;
+}
+
+footer{
+    grid-area: footer;
+    background-color:  #73b1bd;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+footer img{
+    padding-right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+
+
+@media only screen and (max-width:500px){
+    .my_container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 1fr ;
+        grid-template-areas:
+        "main"
+        "about"
+        "education"
+        "experience"
+        "project"
+        "project1"
+        "project2"
+        "project3"
+        "blogs"
+        "footer"
+    }
+    nav{
+        display:none;
+    }
+    main{
+        display: inline-block;
+        align-items: left;
+        text-align: left;
+    
+    }
+    main img{
+        padding-left: 5px;
+        padding-top: 15px;
+    }
+    main h3{
+        text-align: left;
+    }
+    #Projects ul {
+        list-style-type: none;
+        display: block;
+       
+    }
+    #Project li {
+        flex: 1; 
+        text-align: center; 
+        margin:5px;
+    }
+    #Project_img{
+        height:100px;
+        width:150px;
+    
+    }
+}
